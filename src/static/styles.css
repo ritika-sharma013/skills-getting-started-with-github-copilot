@@ -60,9 +60,11 @@ section h3 {
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #e0e4ef;
+  border-left: 4px solid #3949ab;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.06);
 }
 
 .activity-card h4 {
@@ -72,6 +74,83 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e8eaf2;
+}
+
+.participants h5 {
+  margin-bottom: 7px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.participants ul {
+  padding: 0;
+  list-style: none;
+  color: #4b5568;
+}
+
+.participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.participant-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.unregister-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid #f1c7ca;
+  border-radius: 6px;
+  background-color: #fff5f5;
+  color: #b4232d;
+}
+
+.unregister-button:hover {
+  background-color: #ffe3e4;
+}
+
+.unregister-button:focus-visible {
+  outline: 2px solid #b4232d;
+  outline-offset: 2px;
+}
+
+.unregister-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.unregister-button svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.participants .no-participants {
+  margin-bottom: 0;
+  color: #737b8c;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form-group {

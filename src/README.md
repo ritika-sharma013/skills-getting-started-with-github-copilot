@@ -6,6 +6,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- Unregister from activities
 
 ## Getting Started
 
@@ -18,10 +19,14 @@ A super simple FastAPI application that allows students to view and sign up for 
 2. Run the application:
 
    ```
-   python app.py
+   python -m uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
    ```
 
-3. Open your browser and go to:
+   Run this command from the repository root. In VS Code, you can also start
+   the **Launch Mergington WebApp** configuration from Run and Debug.
+
+3. Open the forwarded port `8000` in your browser, or go to:
+   - Activity website: http://localhost:8000/
    - API documentation: http://localhost:8000/docs
    - Alternative documentation: http://localhost:8000/redoc
 
@@ -31,6 +36,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| DELETE | `/activities/{activity_name}/signup?email=student@mergington.edu` | Unregister from an activity                                         |
 
 ## Data Model
 
